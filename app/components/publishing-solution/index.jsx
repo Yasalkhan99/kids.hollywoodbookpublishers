@@ -30,8 +30,24 @@ const PublishingSolution = () => {
   ];
 
   return (
-    <div className="relative py-10">
-      <div className="absolute bottom-[10%] right-0 w-[250px]">
+    <div className="relative pt-10 pb-[120px]">
+      <div className="absolute top-[55%] left-0 w-[350px] transform scale-x-[-1] z-10">
+        <Image
+          src="/images/paperplane.png"
+          alt="Hero Section Background"
+          width={1000}
+          height={1000}
+        />
+      </div>
+      <div className="absolute top-[11%] right-0 w-[220px]">
+        <Image
+          src="/images/paperplane.png"
+          alt="Hero Section Background"
+          width={1000}
+          height={1000}
+        />
+      </div>
+      <div className="absolute bottom-[10%] right-0 w-[30%] z-10">
         <Image
           src="/images/publisherbook.png"
           alt="Hero Section Background"
@@ -47,7 +63,7 @@ const PublishingSolution = () => {
           height={1000}
         />
       </div>
-      <div className="absolute top-[10%] left-0 w-full h-[80%]">
+      <div className="absolute top-[13%] left-0 w-full h-[80%]">
         <Image
           className="w-full h-full"
           src="/images/bigdesign.png"
@@ -55,14 +71,14 @@ const PublishingSolution = () => {
           width={1000}
           height={1000}
         />
-        <div className="absolute top-[5%] left-0 w-[150px]">
-          <Image
-            src="/images/booksandstars.png"
-            alt="Hero Section Background"
-            width={1000}
-            height={1000}
-          />
-        </div>
+      </div>
+      <div className="absolute top-[5%] left-0 w-[150px]">
+        <Image
+          src="/images/booksandstars.png"
+          alt="Hero Section Background"
+          width={1000}
+          height={1000}
+        />
       </div>
       <div className="relative z-10 container">
         <div className="font-childhood text-white text-[60px] text-center">
@@ -94,16 +110,16 @@ const PublishingSolution = () => {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-12">
-          <div className="col-span-7">
+        <div className="grid grid-cols-12 pt-[150px]">
+          <div className="col-span-6">
             <div className="font-childhood text-white text-[60px] leading-[1]">
               Make This Your Year as a Best Children’s Book Author
             </div>
-            <div className="text-white">
+            <div className="text-white pt-2 pr-[100px]">
               Hire our children’s book publishing experts and let us bring your
               story to life, making it shine for young readers everywhere.
             </div>
-            <div className="pt-10">
+            <div className="pt-4">
               <Button
                 text="Let Us Publish My Children’s Book"
                 className="text-white bg-secondary font-inter"
@@ -111,16 +127,15 @@ const PublishingSolution = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12">
-          <div className="col-span-5"></div>
-          <div className="col-span-7">
-            <div className="font-childhood text-white text-[60px] leading-[1]">
+        <div className="grid grid-cols-12 pt-10">
+          <div className="col-span-5 col-start-7">
+            <div className="font-childhood text-white text-[60px] text-right leading-[1]">
               Publish Your Book Now & Save 30%!
             </div>
-            <div className="text-white">
+            <div className="text-white pt-2 text-right">
               Our publishing experts are ready to help you!
             </div>
-            <div className="pt-10">
+            <div className="pt-4 flex justify-end">
               <Button
                 text="Talk To The Expert"
                 className="text-white bg-secondary font-inter"

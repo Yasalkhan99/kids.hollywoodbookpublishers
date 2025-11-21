@@ -1,25 +1,23 @@
 // import { Star } from "lucide-react";
 import Image from "next/image";
 
-export default function TestimonialCard() {
+export default function TestimonialCard({ name, desc, image }) {
   return (
-    <div className="w-full max-w-sm rounded-2xl px-4 py-8 testimonail-card">
+    <div className="w-full rounded-2xl px-4 py-8 testimonail-card min-h-[340px]">
       <div className="p-0 flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/userimage.png"
+              src={image}
               width={50}
               height={50}
               alt="Profile"
               className="rounded-full"
             />
             <div>
-              <h3 className="font-semibold text-lg text-white">Alex Y</h3>
+              <h3 className="font-semibold text-lg text-white">{name}</h3>
               <div className="flex text-yellow-400">
-                {/* {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} size={16} fill="currentColor" />
-              ))} */}
+                <Image src="/images/rating.png" width={100} height={100} alt="Star" />
               </div>
             </div>
           </div>
@@ -35,12 +33,7 @@ export default function TestimonialCard() {
         </div>
 
         <p className="text-sm text-white/90 leading-relaxed">
-          I&apos;ve been dreaming of writing a book for years, but I didn&apos;t
-          have the time or expertise. That&apos;s where Hollywood Books
-          Publisher came to the rescue. Their ghostwriters are pure magic! They
-          took my vague ideas and transformed them into a captivating story. And
-          the book cover? It&apos;s like a work of art. They genuinely want you
-          to succeed and work tirelessly to make your vision a reality.
+          {desc}
         </p>
       </div>
     </div>

@@ -39,6 +39,12 @@ const AuthorTrustUs = () => {
 
     return (
         <div className="relative py-10">
+            <div className="absolute z-10 top-[5%] left-0 w-[220px]">
+                <Image className="w-full h-full" src="/images/authortopbook.png" alt="Hero Section Background" width={1000} height={1000} />
+            </div>
+            <div className="absolute z-10 bottom-[5%] left-0 w-[280px]">
+                <Image className="w-full h-full" src="/images/authorbottombook.png" alt="Hero Section Background" width={1000} height={1000} />
+            </div>
             <div className="absolute top-0 left-0 w-[180px] h-[100%]">
                 <Image className="w-full h-full" src="/images/leftcover.png" alt="Hero Section Background" width={1000} height={1000} />
             </div>

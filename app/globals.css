@@ -16,12 +16,12 @@
   --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -41,17 +41,112 @@ body {
 
   .testimonail-card {
     /* background: #41267808; */
-    background: linear-gradient(
-      90deg,
-      rgba(65, 38, 120, 0.54) 0%,
-      rgba(65, 38, 120, 0.79) 100%
-    );
+    background: linear-gradient(90deg,
+        rgba(65, 38, 120, 0.54) 0%,
+        rgba(65, 38, 120, 0.79) 100%);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     /* -webkit-backdrop-filter: blur(5px); */
     border: 2px solid #41267808;
   }
+
+  .portfolio .book-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform .4s ease, opacity .4s ease;
+  }
+
+  /* Default state for far slides */
+  /* .portfolio .swiper-slide img {
+    opacity: 0.3;
+    transform: scale(0.8);
+  } */
+
+  /* Built-in Swiper active slide */
+  /* .portfolio .swiper-slide-active img {
+    transform: scale(1);
+    opacity: 1;
+  } */
+
+  /* Built-in next/prev slides */
+  /* .portfolio .swiper-slide-next img,
+  .portfolio .swiper-slide-prev img {
+    transform: scale(0.9);
+    opacity: 0.7;
+  } */
+
+  /* ⭐ YOUR CUSTOM two-active (2 slides active) */
+  /* .portfolio .swiper-slide.two-active img {
+    transform: scale(1);
+    opacity: 1;
+  } */
+
+  .portfolio .swiper-slide-active img {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* 2: next */
+  .portfolio .swiper-slide-next img {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* 3: second next */
+  .portfolio .swiper-slide-next+.swiper-slide img {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+
+  /* 4: third next */
+  .portfolio .swiper-slide-next+.swiper-slide+.swiper-slide img {
+    transform: scale(0.85);
+    opacity: 1;
+  }
+
+  /* 2: first prev */
+  .portfolio .swiper-slide-prev img {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  
+
+ 
+
+
+
+  /* The ACTIVE slide (center one) */
+  /* .portfolio .swiper-slide-active img {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  } */
+
+  /* Slides next to the center */
+  /* .portfolio .swiper-slide-next img,
+  .portfolio .swiper-slide-prev img {
+    transform: scale(0.9) !important;
+    opacity: 0.7 !important;
+  } */
+
+  /* Slides farther away */
+  /* .portfolio .swiper-slide img {
+    opacity: 0.3;
+    transform: scale(0.8);
+  } */
+
+  /* .two-active img {
+    transform: scale(1) !important;
+    opacity: 1;
+  } */
+
+  /* Make swiper background clean */
+  /* .swiper {
+    padding: 40px 0;
+  } */
+
 
   @media (min-width: 640px) {
     .container {

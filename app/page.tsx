@@ -8,6 +8,7 @@ import PublicService from "./components/publish-service";
 import PublishingSolution from "./components/publishing-solution";
 import Portfolio from "./components/portfolio";
 import Questions from "./components/questions";
+import HireUs from "./components/hire-us";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection />
       <HeroBottomLogos />
       <PublicService/>
+      <HireUs/>
       <AuthorTrustUs />
       <Portfolio/>
       <PublishYourChildrenBook />
