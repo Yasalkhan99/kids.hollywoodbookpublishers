@@ -63,7 +63,7 @@ const HireUs = () => {
                 <div className="absolute top-0 left-0 w-full">
                     <Image ref={secondRef}
                         className="cloud-image mx-auto" src="/images/animation2.png" alt="Hero Section Background" width={1000} height={1000} />
-                    <div ref={textRef} className="absolute z-20 -mt-[6%] top-[70%] left-[50%] -translate-x-1/2 -translate-y-1/2 font-childhood w-full text-white text-center text-[54px] leading-[1]">Ready to Publish a Children's Book?<br />Our Experts Handle Everything
+                    <div ref={textRef} className="absolute z-20 -mt-[6%] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 font-childhood w-full text-white text-center text-[54px] leading-[1]">Ready to Publish a Children's Book?<br />Our Experts Handle Everything
                         <div className="text-white text-[16px] text-center font-inter px-[18%] py-4 leading-[1.3]">
                             Publishing your children’s book doesn’t have to be overwhelming. With Hollywood Books Publisher, over 250 authors have already turned their ideas into beautifully crafted stories that young readers adore.
                             From editing and illustrations to cover design and platform publishing, our experts handle everything—making the entire process simple, stress-free, and exciting. Whether you want a vibrant printed book or a polished eBook, we shape your vision into a story kids will truly love.
