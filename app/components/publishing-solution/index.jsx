@@ -31,6 +31,14 @@ const PublishingSolution = () => {
 
   return (
     <div className="relative pt-10 pb-[120px]">
+      <div className="absolute top-[55%] left-0 w-[350px] transform scale-x-[-1] z-10">
+        <Image
+          src="/images/paperplane.png"
+          alt="Hero Section Background"
+          width={1000}
+          height={1000}
+        />
+      </div>
       <div className="absolute top-[11%] right-0 w-[220px]">
         <Image
           src="/images/paperplane.png"

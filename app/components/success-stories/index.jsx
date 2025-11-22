@@ -4,6 +4,9 @@ import Image from "next/image";
 import TestimonialCard from "../testimonial-card";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const SuccessStories = () => {
 
@@ -44,6 +47,9 @@ const SuccessStories = () => {
       image: "/images/userimage.png"
     },
   ];
+
+  // duplicate testimonials to have enough slides for the carousel
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
     <div className="relative pt-10 pb-20 bg-[#F3F3F3]">
@@ -93,7 +99,7 @@ const SuccessStories = () => {
         </div>
       </div>
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Navigation, Pagination]}
         autoplay={{
           delay: 100,
           disableOnInteraction: false,
