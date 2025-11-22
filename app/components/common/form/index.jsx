@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Button from '../button';
 
-const ContactForm = () => {
+const ContactForm = ({title}) => {
     const onFormSubmit = (e) => {
         e.preventDefault();
     }
@@ -19,7 +19,8 @@ const ContactForm = () => {
                 <div className="relative z-10">
                     {/* Header */}
                     <div className="font-childhood text-4xl text-gray-900 mb-2">
-                        CLAIM <span className='font-medium text-[48px]'>30%</span> OFF TODAY!
+                        {title}
+                        {/* CLAIM <span className='font-medium text-[48px]'>{subtitle}</span> OFF TODAY! */}
                     </div>
 
                     {/* Subtitle */}

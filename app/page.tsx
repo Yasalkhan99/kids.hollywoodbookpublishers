@@ -9,6 +9,8 @@ import PublishingSolution from "./components/publishing-solution";
 import Portfolio from "./components/portfolio";
 import Questions from "./components/questions";
 import HireUs from "./components/hire-us";
+import BookYourself from "./components/book-yourself";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -24,6 +26,9 @@ export default function Home() {
       <PublishingSolution/>
       <SuccessStories />
       <Questions/>
+      <BookYourself/>
+      <HeroBottomLogos/>
+      <Footer/>
     </>
   );
 }

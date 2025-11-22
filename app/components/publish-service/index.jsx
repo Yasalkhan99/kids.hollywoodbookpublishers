@@ -3,11 +3,19 @@ import Button from "../common/button";
 import Image from "next/image";
 
 const PublicService = () => {
+  const services = [
+    "Manuscript Audits",
+    "Full Book Design With Illustrations",
+    "Reading Level Assessment",
+    "Book Formatting",
+    "Book Award Submissions",
+    "Book Review Coordination",
+  ];
   return (
     <div className="relative bg-[#412678]">
       <div className="absolute top-0 right-0 w-[30%]">
         <Image
-        className="w-full"
+          className="w-full"
           src="/images/design.png"
           alt="Hero Section Background"
           width={1000}
@@ -42,6 +50,14 @@ const PublicService = () => {
             readers; it will stand out, shine, and make a lasting impact.
           </div>
           <div className="text-white">Get started today & enjoy:</div>
+          <div className="pt-4 max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+            {services.map((item) => (
+              <div key={item} className="flex items-start">
+                <span className="mr-2 text-white text-[16px]">•</span>
+                <span className="text-white text-[16px]">{item}</span>
+              </div>
+            ))}
+          </div>
           <div className="pt-10">
             <Button
               text="Let Us Publish My Children’s Book"

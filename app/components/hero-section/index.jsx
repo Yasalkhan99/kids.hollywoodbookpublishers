@@ -51,7 +51,7 @@ const HeroSection = () => {
                         </div>
                         <div className="col-span-1">
                             <div className="flex justify-end">
-                                <ContactForm />
+                                <ContactForm title="Claim 30% Off Today!"/>
                             </div>
                         </div>
                     </div>
