@@ -1,13 +1,11 @@
 "use client";
 import Image from "next/image";
-// import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation, Autoplay } from "swiper/modules";
 import 'swiper/css/navigation';
 
 const Portfolio = () => {
-
   const images = [
     "/images/p1.png",
     "/images/p2.png",
@@ -93,7 +91,7 @@ const Portfolio = () => {
           navigation
           centeredSlides={true}
           spaceBetween={30}
-          slidesPerView={5}          // shows 4 main items
+          slidesPerView={5} // shows 4 main items
           loop={true}
           autoplay={{
             delay: 100,
@@ -102,8 +100,6 @@ const Portfolio = () => {
           }}
           speed={2500}
           grabCursor={true}
-          // grabCursor={true}
-
           // responsive
           breakpoints={{
             320: { slidesPerView: 1.3, spaceBetween: 15 },

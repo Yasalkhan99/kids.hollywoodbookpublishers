@@ -1,11 +1,13 @@
-const KoboLogo = ({ ...props }) => {
+const KoboLogo = ({ classsName, ...props }) => {
     return (
         <svg
-            width={141}
+            className={classsName}
+            width={110}
             height={76}
             viewBox="0 0 141 76"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            {...props}
         >
             <path
                 d="M17.3984 0V46.6811H24.937V30.4442L36.2448 46.6811H45.2331L32.4756 28.4146L44.3633 14.4972H35.375L24.937 26.6749V0H17.3984Z"

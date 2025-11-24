@@ -17,18 +17,18 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
-      <HeroBottomLogos />
-      <PublicService/>
-      <HireUs/>
+      <HeroBottomLogos text={true} />
+      <PublicService />
+      <HireUs />
       <AuthorTrustUs />
-      <Portfolio/>
+      <Portfolio />
       <PublishYourChildrenBook />
-      <PublishingSolution/>
+      <PublishingSolution />
       <SuccessStories />
-      <Questions/>
-      <BookYourself/>
-      <HeroBottomLogos/>
-      <Footer/>
+      <Questions />
+      <BookYourself />
+      <HeroBottomLogos text={false} />
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "react-phone-number-input/style.css";
+@import "flag-icon-css/css/flag-icons.min.css";
 
 :root {
   --background: #e2912a;
@@ -41,9 +43,11 @@ body {
 
   .testimonail-card {
     /* background: #41267808; */
-    background: linear-gradient(90deg,
-        rgba(65, 38, 120, 0.54) 0%,
-        rgba(65, 38, 120, 0.79) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(65, 38, 120, 0.54) 0%,
+      rgba(65, 38, 120, 0.79) 100%
+    );
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -51,11 +55,29 @@ body {
     border: 2px solid #41267808;
   }
 
+  .PhoneInputInput {
+    padding-left: 6px;
+  }
+
+  .accordians-questions:nth-child(odd){
+    transform: rotate(-2deg);
+  }
+
+  .accordians-questions:nth-child(even){
+    transform: rotate(2deg) translateY(50px);
+  }
+
+  .PhoneInputInput:focus,
+  .PhoneInputInput:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
   .portfolio .book-img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: transform .4s ease, opacity .4s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
   /* Default state for far slides */
@@ -95,13 +117,13 @@ body {
   }
 
   /* 3: second next */
-  .portfolio .swiper-slide-next+.swiper-slide img {
+  .portfolio .swiper-slide-next + .swiper-slide img {
     transform: scale(0.9);
     opacity: 0.9;
   }
 
   /* 4: third next */
-  .portfolio .swiper-slide-next+.swiper-slide+.swiper-slide img {
+  .portfolio .swiper-slide-next + .swiper-slide + .swiper-slide img {
     transform: scale(0.85);
     opacity: 1;
   }
@@ -111,12 +133,6 @@ body {
     transform: scale(1);
     opacity: 1;
   }
-
-  
-
- 
-
-
 
   /* The ACTIVE slide (center one) */
   /* .portfolio .swiper-slide-active img {
@@ -147,34 +163,33 @@ body {
     padding: 40px 0;
   } */
 
-
   @media (min-width: 640px) {
     .container {
-      max-width: 640px;
+      max-width: 540px;
     }
   }
 
   @media (min-width: 768px) {
     .container {
-      max-width: 768px;
+      max-width: 720px;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      max-width: 1024px;
+      max-width: 960px;
     }
   }
 
   @media (min-width: 1280px) {
     .container {
-      max-width: 1100px;
+      max-width: 1140px;
     }
   }
 
   @media (min-width: 1536px) {
     .container {
-      max-width: 1250px;
+      max-width: 1320px;
     }
   }
 
