@@ -18,6 +18,50 @@ const HireUs = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const openZendeskWidget = () => {
+    if (typeof window !== 'undefined') {
+      const openWidget = () => {
+        try {
+          if (window.zE && typeof window.zE === 'function') {
+            // Try webWidget (for Web Widget)
+            window.zE('webWidget', 'open');
+            console.log('Zendesk widget opened');
+          } else {
+            console.warn('Zendesk zE function not available');
+          }
+        } catch (error) {
+          console.error('Error opening Zendesk widget:', error);
+          // Try alternative method
+          try {
+            if (window.zE) {
+              window.zE('messenger', 'open');
+            }
+          } catch (e) {
+            console.error('Alternative method also failed:', e);
+          }
+        }
+      };
+
+      if (window.zE) {
+        openWidget();
+      } else {
+        // Wait for Zendesk to load
+        let attempts = 0;
+        const maxAttempts = 50; // 5 seconds max
+        const checkZendesk = setInterval(() => {
+          attempts++;
+          if (window.zE) {
+            openWidget();
+            clearInterval(checkZendesk);
+          } else if (attempts >= maxAttempts) {
+            clearInterval(checkZendesk);
+            console.warn('Zendesk widget failed to load after 5 seconds');
+          }
+        }, 100);
+      }
+    }
+  };
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -125,6 +169,7 @@ const HireUs = () => {
               <Button
                 text="Claim Free Consultation"
                 className="text-[16px] !text-[#38216e] bg-white font-inter max-lg:text-[12px] max-sm:!text-[9px]"
+                onClick={openZendeskWidget}
               />
             </div>
           </div>

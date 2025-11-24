@@ -18,6 +18,50 @@ const HeroSection = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const openZendeskWidget = () => {
+    if (typeof window !== 'undefined') {
+      const openWidget = () => {
+        try {
+          if (window.zE && typeof window.zE === 'function') {
+            // Try webWidget (for Web Widget)
+            window.zE('webWidget', 'open');
+            console.log('Zendesk widget opened');
+          } else {
+            console.warn('Zendesk zE function not available');
+          }
+        } catch (error) {
+          console.error('Error opening Zendesk widget:', error);
+          // Try alternative method
+          try {
+            if (window.zE) {
+              window.zE('messenger', 'open');
+            }
+          } catch (e) {
+            console.error('Alternative method also failed:', e);
+          }
+        }
+      };
+
+      if (window.zE) {
+        openWidget();
+      } else {
+        // Wait for Zendesk to load
+        let attempts = 0;
+        const maxAttempts = 50; // 5 seconds max
+        const checkZendesk = setInterval(() => {
+          attempts++;
+          if (window.zE) {
+            openWidget();
+            clearInterval(checkZendesk);
+          } else if (attempts >= maxAttempts) {
+            clearInterval(checkZendesk);
+            console.warn('Zendesk widget failed to load after 5 seconds');
+          }
+        }, 100);
+      }
+    }
+  };
   return (
     <>
       <section className="relative pt-[200px] pb-20 max-sm:pb-10 m-0 max-lg:pt-[170px] max-sm:pt-[120px] overflow-hidden">
@@ -107,6 +151,7 @@ const HeroSection = () => {
                 <Button
                   text="Talk To The Expert"
                   className="text-white bg-primary font-inter max-sm:w-[60%] max-sm:justify-center"
+                  onClick={openZendeskWidget}
                 />
               </div>
             </div>

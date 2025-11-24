@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,6 +41,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${childHood.variable} ${inter.variable} antialiased`}
       >
+        <Script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=bc23fe0d-f07b-4d75-bb93-7be4f31694fe"
+          strategy="afterInteractive"
+        />
         {children}  
       </body>
     </html>

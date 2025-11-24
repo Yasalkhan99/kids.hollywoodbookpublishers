@@ -16,6 +16,50 @@ const PublishYourChildrenBook = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const openZendeskWidget = () => {
+    if (typeof window !== 'undefined') {
+      const openWidget = () => {
+        try {
+          if (window.zE && typeof window.zE === 'function') {
+            // Try webWidget (for Web Widget)
+            window.zE('webWidget', 'open');
+            console.log('Zendesk widget opened');
+          } else {
+            console.warn('Zendesk zE function not available');
+          }
+        } catch (error) {
+          console.error('Error opening Zendesk widget:', error);
+          // Try alternative method
+          try {
+            if (window.zE) {
+              window.zE('messenger', 'open');
+            }
+          } catch (e) {
+            console.error('Alternative method also failed:', e);
+          }
+        }
+      };
+
+      if (window.zE) {
+        openWidget();
+      } else {
+        // Wait for Zendesk to load
+        let attempts = 0;
+        const maxAttempts = 50; // 5 seconds max
+        const checkZendesk = setInterval(() => {
+          attempts++;
+          if (window.zE) {
+            openWidget();
+            clearInterval(checkZendesk);
+          } else if (attempts >= maxAttempts) {
+            clearInterval(checkZendesk);
+            console.warn('Zendesk widget failed to load after 5 seconds');
+          }
+        }, 100);
+      }
+    }
+  };
     return (
         <div className="relative bg-white py-10">
             <div className="absolute top-0 left-0 w-[10%]">
@@ -38,7 +82,7 @@ const PublishYourChildrenBook = () => {
                 <div className="text-black text-[16px] max-md:text-[14px] max-sm:text-[12px] text-center px-[100px] max-lg:px-0 ">Need your children’s book published fast? Our streamlined self-publishing process gets your story ready for readers quickly—on any platform you choose.</div>
                 <div className="flex gap-2 max-sm:flex-col max-sm:items-center justify-center pt-6">
                     <Button text="Publish My Children's Book" className="text-white bg-secondary font-inter max-sm:w-[60%] max-sm:justify-center" onClick={scrollToPublishService} />
-                    <Button text="Talk To The Expert" className="text-white bg-primary font-inter max-sm:w-[60%] max-sm:justify-center" />
+                    <Button text="Talk To The Expert" className="text-white bg-primary font-inter max-sm:w-[60%] max-sm:justify-center" onClick={openZendeskWidget} />
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@ SMTP_PASSWORD=your-app-password
 SMTP_FROM=Kids Hollywood Books Publisher <your-email@gmail.com>
 
 # Optional: Recipient email (where contact form submissions are sent)
-# If not set, defaults to SMTP_USER, or yasalkhan90@gmail.com if SMTP_USER is also not set
+# If not set, defaults to SMTP_USER, or leads@hollywoodbookspublisher.com if SMTP_USER is also not set
 TO_EMAIL=recipient@example.com
 ```
 
@@ -24,7 +24,7 @@ TO_EMAIL=recipient@example.com
 - `SMTP_FROM` is the display name and email that appears as the sender
 - `TO_EMAIL` is where contact form submissions will be sent (optional)
 - If `TO_EMAIL` is not set, it will use `SMTP_USER`
-- If neither is set, it defaults to `yasalkhan90@gmail.com`
+- If neither is set, it defaults to `leads@hollywoodbookspublisher.com`
 
 ## 2. Gmail Setup (If using Gmail)
 
@@ -71,7 +71,7 @@ Use your email provider's SMTP settings. Common ports:
 - `SMTP_USER`: Your email address (used for authentication)
 - `SMTP_PASSWORD`: Your email password or app password
 - `SMTP_FROM`: Display name and email for sent emails (format: "Name <email@example.com>")
-- `TO_EMAIL`: (Optional) Email address where contact form submissions are sent. If not set, defaults to `SMTP_USER`, or `yasalkhan90@gmail.com` if `SMTP_USER` is also not configured
+- `TO_EMAIL`: (Optional) Email address where contact form submissions are sent. If not set, defaults to `SMTP_USER`, or `leads@hollywoodbookspublisher.com` if `SMTP_USER` is also not configured
 
 ## 5. Security Notes
 

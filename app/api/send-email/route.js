@@ -27,11 +27,11 @@ export async function POST(request) {
       );
     }
 
-    // Determine recipient email - always default to yasalkhan90@gmail.com if not configured
+    // Determine recipient email - always default to leads@hollywoodbookspublisher.com if not configured
     // Check if TO_EMAIL exists and is not empty, otherwise use default
     const recipientEmail = (process.env.TO_EMAIL && process.env.TO_EMAIL.trim() !== '') 
       ? process.env.TO_EMAIL.trim() 
-      : 'yasalkhan90@gmail.com';
+      : 'leads@hollywoodbookspublisher.com';
     
     console.log('Email Configuration:', {
       recipient: recipientEmail,
@@ -77,7 +77,7 @@ export async function POST(request) {
     
     const mailOptions = {
       from: fromEmail,
-      to: recipientEmail, // Always sends to yasalkhan90@gmail.com (or TO_EMAIL if set)
+      to: recipientEmail, // Always sends to leads@hollywoodbookspublisher.com (or TO_EMAIL if set)
       replyTo: email, // User's email for reply
       subject: `New Contact Form Submission from ${name}`,
       html: `
