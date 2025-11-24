@@ -5,30 +5,30 @@ import React, { useState } from "react";
 const Questions = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // All bars show the same question
-  const questionText =
-    "What Is The Timeline For Publishing My Children's Book?";
-
   const accordionItems = [
     {
+      question: "What Is The Timeline For Publishing My Children's Book?",
       answer:
         "The timeline for publishing your children's book typically ranges from 8-12 weeks, depending on the complexity of your project. This includes manuscript editing, illustration design, formatting, and final publishing setup. We'll provide you with a detailed timeline once we review your specific requirements.",
       rotation: "rotate-[2deg]",
       position: "top-left",
     },
     {
+      question: "What's Included In Your Publishing Package?",
       answer:
         "Our comprehensive publishing package includes manuscript editing and proofreading, custom illustrations, book cover design, interior formatting for both print and digital formats, ISBN registration, and multi-platform publishing (Amazon, Kindle, and major bookstores). We also provide marketing support and distribution assistance.",
       rotation: "rotate-[-2deg]",
       position: "top-right",
     },
     {
+      question: "Do I Retain Full Ownership Of My Book?",
       answer:
         "Absolutely! You maintain 100% ownership and full rights to your children's book. We work for you, not the other way around. You retain all creative control and copyright, and you can publish, distribute, or modify your book as you see fit.",
       rotation: "rotate-[1.5deg]",
       position: "bottom-left",
     },
     {
+      question: "What Are Your Pricing Options?",
       answer:
         "Pricing varies based on your specific needs, including the number of pages, illustration complexity, and additional services. We offer transparent, upfront pricing with no hidden fees. Contact us for a free consultation and personalized quote tailored to your project.",
       rotation: "rotate-[-1.5deg]",
@@ -108,7 +108,7 @@ const Questions = () => {
                         />
                       </div>
                       <span className="text-left font-inter text-[14px] max-sm:text-[10px] font-medium break-words">
-                        {questionText}
+                        {item.question}
                       </span>
                     </div>
                     <div className="ml-4 flex-shrink-0">
