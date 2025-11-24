@@ -11,6 +11,13 @@ const HireUs = () => {
   const firstRef = useRef(null);
   const secondRef = useRef(null);
   const textRef = useRef(null);
+
+  const scrollToContactForm = () => {
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -113,6 +120,7 @@ const HireUs = () => {
               <Button
                 text="Hire Our Expert"
                 className="text-[16px] text-white bg-secondary font-inter max-lg:text-[12px] max-sm:!text-[9px]"
+                onClick={scrollToContactForm}
               />
               <Button
                 text="Claim Free Consultation"

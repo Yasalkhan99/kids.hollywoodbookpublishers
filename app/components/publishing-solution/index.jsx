@@ -15,6 +15,13 @@ const PublishingSolution = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const scrollToContactForm = () => {
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   const successStories = [
     {
       name: "Ghostwriting Services",

@@ -9,6 +9,13 @@ const PublishYourChildrenBook = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const scrollToContactForm = () => {
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
     return (
         <div className="relative bg-white py-10">
             <div className="absolute top-0 left-0 w-[10%]">

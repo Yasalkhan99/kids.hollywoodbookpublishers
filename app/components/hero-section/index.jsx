@@ -11,6 +11,13 @@ const HeroSection = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const scrollToContactForm = () => {
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <>
       <section className="relative pt-[200px] pb-20 max-sm:pb-10 m-0 max-lg:pt-[170px] max-sm:pt-[120px] overflow-hidden">
