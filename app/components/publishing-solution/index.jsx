@@ -1,10 +1,20 @@
 'use client';
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Button from "../common/button";
+import Modal from "../common/modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 const PublishingSolution = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   const successStories = [
     {
       name: "Ghostwriting Services",
@@ -162,8 +172,9 @@ const PublishingSolution = () => {
             </div>
             <div className="pt-4">
               <Button
-                text="Let Us Publish My Children’s Book"
+                text="Let Us Publish My Children's Book"
                 className="text-white bg-secondary font-inter"
+                onClick={openModal}
               />
             </div>
           </div>
@@ -185,6 +196,7 @@ const PublishingSolution = () => {
           </div>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

@@ -1,9 +1,16 @@
+"use client";
 import Image from "next/image";
 import Heading from "../common/heading";
 import ContactForm from "../common/form";
 import Button from "../common/button";
 
 const HeroSection = () => {
+  const scrollToPublishService = () => {
+    const element = document.getElementById('publish-service');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <>
       <section className="relative pt-[200px] pb-20 max-sm:pb-10 m-0 max-lg:pt-[170px] max-sm:pt-[120px] overflow-hidden">
@@ -86,8 +93,9 @@ const HeroSection = () => {
               </div>
               <div className="flex gap-2 pt-6 flex-wrap max-lg:justify-center max-sm:flex-col max-sm:items-center">
                 <Button
-                  text="Publish My Children’s Book"
+                  text="Publish My Children's Book"
                   className="text-white bg-secondary font-inter max-sm:w-[60%] max-sm:justify-center"
+                  onClick={scrollToPublishService}
                 />
                 <Button
                   text="Talk To The Expert"

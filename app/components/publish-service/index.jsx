@@ -1,8 +1,19 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Button from "../common/button";
 import Image from "next/image";
+import Modal from "../common/modal";
 
 const PublicService = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   const services = [
     "Manuscript Audits",
     "Full Book Design With Illustrations",
@@ -12,7 +23,7 @@ const PublicService = () => {
     "Book Review Coordination",
   ];
   return (
-    <div className="relative bg-[#412678]">
+    <div id="publish-service" className="relative bg-[#412678]">
       <div className="absolute top-0 right-0 w-[38%] opacity-30 max-lg:w-[70%]">
         <Image
           className="w-full"
@@ -76,10 +87,12 @@ const PublicService = () => {
           </div>
           <div className="pt-10 max-sm:pt-2 max-xl:pt-6">
             <Button
-              text="Let Us Publish My Children’s Book"
+              text="Let Us Publish My Children's Book"
               className="text-white bg-secondary font-inter max-lg:mx-auto"
+              onClick={openModal}
             />
           </div>
+          <Modal isOpen={isModalOpen} onClose={closeModal} />
         </div>
         <div className="relative z-10 max-lg:block hidden my-4">
           <Image

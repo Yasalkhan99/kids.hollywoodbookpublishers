@@ -29,7 +29,7 @@ const BookYourself = () => {
 
   return (
     <>
-      <section className="relative pt-20 pb-20 m-0 max-sm:py-10">
+      <section id="book-yourself" className="relative pt-20 pb-20 m-0 max-sm:py-10">
         <div className="absolute z-20 bottom-[10%] max-sm:bottom-[44%] right-0 w-[160px] max-sm:w-[100px] transform scale-x-[-1]">
             <Image
               src="/images/new.png"
@@ -89,8 +89,8 @@ const BookYourself = () => {
           </div>
           <div className="grid grid-cols-2 max-md:grid-cols-1 max-xl:gap-4">
             <div className="col-span-1">
-              <div className="flex justify-start">
-                <ContactForm title="Send Us Your Details" icon={false} />
+              <div id="contact-form" className="flex justify-start">
+                <ContactForm title="Send Us Your Details" icon={false} enableAnimation={true} />
               </div>
             </div>
             <div className="relative z-10 col-span-1 max-sm:pt-4">
