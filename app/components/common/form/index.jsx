@@ -59,10 +59,10 @@ const ContactForm = ({ title, icon, enableAnimation = false }) => {
         if (messageRef.current) messageRef.current.value = '';
         setValue('');
         
-        // Clear success message after 5 seconds
+        // Redirect to thank you page after 1 second
         setTimeout(() => {
-          setSubmitStatus(null);
-        }, 5000);
+          window.location.href = 'https://publishing.hollywoodbookspublisher.com/thank-you';
+        }, 1000);
       } else {
         setSubmitStatus('error');
         console.error('Error:', data.error);
