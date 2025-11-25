@@ -27,8 +27,8 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "kids hollywoodbooks publisher",
-  description: "Publish Your Children's Book Anywhere Without The Hassle",
+  title: "Children’s Book Publishing Made Easy – Hollywood Books Publisher",
+  description: "From illustrations to printing, we handle everything for your children’s book. Simple process, expert support, worldwide availability. Publish your kids’ book now.",
 };
 
 export default function RootLayout({
@@ -46,7 +46,7 @@ export default function RootLayout({
           src="https://static.zdassets.com/ekr/snippet.js?key=bc23fe0d-f07b-4d75-bb93-7be4f31694fe"
           strategy="afterInteractive"
         />
-        {children}  
+        {children}
       </body>
     </html>
   );
