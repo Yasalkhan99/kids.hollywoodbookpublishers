@@ -72,10 +72,10 @@ const Modal = ({ isOpen, onClose }) => {
         if (emailRef.current) emailRef.current.value = '';
         if (messageRef.current) messageRef.current.value = '';
         setPhoneValue('');
+        // Redirect to thank you page after 1 second
         setTimeout(() => {
-          setSubmitStatus(null);
-          onClose();
-        }, 2000);
+          window.location.href = 'https://publishing.hollywoodbookspublisher.com/thank-you';
+        }, 1000);
       } else {
         setSubmitStatus('error');
       }
