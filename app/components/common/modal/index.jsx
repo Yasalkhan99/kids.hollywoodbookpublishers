@@ -374,7 +374,7 @@ const Modal = ({ isOpen, onClose }) => {
                      id="modal-name"
                      required
                      className="w-full px-3 py-2 text-primary bg-white border border-gray-300 rounded-lg text-xs focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all placeholder:text-gray-400"
-                     placeholder="name:"
+                     placeholder="Name:"
                    />
                  </motion.div>
 
@@ -392,7 +392,7 @@ const Modal = ({ isOpen, onClose }) => {
                      id="modal-email"
                      required
                      className="w-full text-primary px-3 py-2 bg-white border border-gray-300 rounded-lg text-xs focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all placeholder:text-gray-400"
-                     placeholder="email address:"
+                     placeholder="Email address:"
                    />
                  </motion.div>
 
@@ -413,7 +413,7 @@ const Modal = ({ isOpen, onClose }) => {
                        value={phoneValue}
                        onChange={setPhoneValue}
                        className="w-full text-xs px-3 py-2"
-                       placeholder="phone:"
+                       placeholder="Phone:"
                      />
                    </motion.div>
                  </motion.div>
@@ -432,7 +432,7 @@ const Modal = ({ isOpen, onClose }) => {
                      rows="2"
                      required
                      className="w-full px-3 py-2 bg-white text-primary border border-gray-300 rounded-lg text-xs focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all resize-none placeholder:text-gray-400"
-                     placeholder="message:"
+                     placeholder="Message:"
                    />
                  </motion.div>
 
