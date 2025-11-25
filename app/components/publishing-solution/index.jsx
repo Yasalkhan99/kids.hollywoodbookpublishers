@@ -224,7 +224,7 @@ const PublishingSolution = () => {
             <div className="pt-4">
               <Button
                 text="Let Us Publish My Children's Book"
-                className="text-white bg-secondary font-inter"
+                className="!bg-[#e2912a] max-2xl:!bg-secondary text-white bg-secondary font-inter"
                 onClick={openModal}
               />
             </div>

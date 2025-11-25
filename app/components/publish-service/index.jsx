@@ -88,7 +88,7 @@ const PublicService = () => {
           <div className="pt-10 max-sm:pt-2 max-xl:pt-6">
             <Button
               text="Let Us Publish My Children's Book"
-              className="text-white bg-secondary font-inter max-lg:mx-auto"
+              className="text-white !bg-[#e2912a] !text-white font-inter max-lg:mx-auto"
               onClick={openModal}
             />
           </div>

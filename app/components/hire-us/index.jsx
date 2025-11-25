@@ -163,7 +163,7 @@ const HireUs = () => {
             <div className="flex gap-2 justify-center pt-4 max-xl:pt-0">
               <Button
                 text="Hire Our Expert"
-                className="text-[16px] text-white bg-secondary font-inter max-lg:text-[12px] max-sm:!text-[9px]"
+                className="text-[16px] !bg-[#e2912a] text-white font-inter max-lg:text-[12px] max-sm:!text-[9px]"
                 onClick={scrollToContactForm}
               />
               <Button
